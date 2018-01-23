@@ -11,7 +11,7 @@ import UIKit
 class ChannelVC: UIViewController {
 
     @IBOutlet weak var loginBtn: UIButton!
-    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,4 +23,5 @@ class ChannelVC: UIViewController {
         performSegue(withIdentifier: TO_LOGIN, sender: nil)
     }
 
+    
 }

@@ -1,17 +1,15 @@
 //
-//  LoginVC.swift
+//  CreateAccountVC.swift
 //  Smack
 //
-//  Created by Mike on 1/18/18.
+//  Created by Mike on 1/20/18.
 //  Copyright © 2018 jprsoftware. All rights reserved.
 //
 
 import UIKit
 
-class LoginVC: UIViewController {
+class CreateAccountVC: UIViewController {
 
-    @IBOutlet weak var closeBtn: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,12 +21,8 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func closeBtnPressed(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
+    @IBAction func closePressed(_ sender: Any) {
+        performSegue(withIdentifier: UNWIND, sender: nil)
     }
     
-    @IBAction func createAcctBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
-    }
 }
