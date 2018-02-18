@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27284A1F2039F3F900C9363C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27284A1E2039F3F900C9363C /* AuthService.swift */; };
 		2745AD3320094860001F30CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745AD3220094860001F30CB /* AppDelegate.swift */; };
 		2745AD3820094860001F30CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2745AD3620094860001F30CB /* Main.storyboard */; };
 		2745AD3A20094860001F30CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2745AD3920094860001F30CB /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27284A1E2039F3F900C9363C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2745AD2F20094860001F30CB /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2745AD3220094860001F30CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2745AD3720094860001F30CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		27284A1D2039F3D600C9363C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27284A1E2039F3F900C9363C /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2745AD2620094860001F30CB = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		2745AD3120094860001F30CB /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				27284A1D2039F3D600C9363C /* Services */,
 				2745AD6E201112F7001F30CB /* Utilities */,
 				2745AD67200FB5DC001F30CB /* Model */,
 				2745AD66200FB5D1001F30CB /* View */,
@@ -512,6 +523,7 @@
 				2745AD6B200FB614001F30CB /* ChannelVC.swift in Sources */,
 				2745AD69200FB5FE001F30CB /* ChatVC.swift in Sources */,
 				27F435032013B81A005EF039 /* CreateAccountVC.swift in Sources */,
+				27284A1F2039F3F900C9363C /* AuthService.swift in Sources */,
 				2745AD7220111E88001F30CB /* LoginVC.swift in Sources */,
 				2745AD6D201101F2001F30CB /* GradientView.swift in Sources */,
 				2745AD3320094860001F30CB /* AppDelegate.swift in Sources */,
