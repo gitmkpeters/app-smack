@@ -46,16 +46,12 @@ class AuthService {
         
         let lowerCaseEmail = email.lowercased()
         
-        let header = [
-            "Content-Type": "application/json; charset=utf-8"
-        ]
-        
         let body: [String: Any] = [
             "email": lowerCaseEmail,
             "password":password
         ]
         
-        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (response) in
+        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
             if response.result.error == nil {
                 completion(true)
             }else{
@@ -64,6 +60,34 @@ class AuthService {
             }
             
         }
-        
     }
+    
+    func loginUser(email: String, password: String, completion: @escaping CompletionHandeler)  {
+        let lowerCaseEmail = email.lowercased()
+        
+        let body: [String: Any] = [
+            "email": lowerCaseEmail,
+            "password":password
+        ]
+        
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON {
+            ( reponse ) in
+            if reponse.result.error == nil {
+                if let json = reponse.result.value as? Dictionary<String,Any> {
+                    if let email = json["user"] as? String {
+                        self.userEmail = email
+                    }
+                    if let token = json["token"] as? String{
+                        self.authToke = token
+                    }
+                }
+                self.isLoggedIn = true
+                completion(true)
+            }else{
+                completion(false)
+                debugPrint(reponse.result.error as Any)
+            }
+        }
+    }
+    
 }
